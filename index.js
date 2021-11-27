@@ -34,12 +34,30 @@ mongoose.connect("mongodb://localhost/testdb")
 // run()
 
 
-//! Method 2 of creating user
+//! Method 2 of creating user and updating 'current user'
+// async function run(){
+//     const user = await User.create({name : "Rupam", age : 20})
+//     //* For updating a user
+//     user.name = "Sayan" // This will not update the user in the Database 
+//     await user.save(); // This will save the data to the database
+//     console.log(user);
+// }
+// run()
+
+
+
+//! Method 2 of creating user and updating 'current user'
 async function run(){
-    const user = await User.create({name : "Rupam", age : 20})
-    //* For updating a user
-    user.name = "Sayan" // This will not update the user in the Database 
-    await user.save(); // This will save the data to the database
+    const user = await User.create({
+        name : "Shuvrak", 
+        age : 45,
+        hobbies : ["Gamming", "Swimming", "Converseation"],
+        address : {
+            street : "Gorai Road",
+            city : "Asansol"
+        }
+    })
+    
     console.log(user);
 }
 run()

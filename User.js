@@ -1,9 +1,25 @@
 const mongoose = require('mongoose');
 
-const userSchema =  new mongoose.Schema({
-    name : String,
-    age : Number
+const addressSchema = new mongoose.Schema({
+    street : String,
+    city : String
 })
 
-// The below ines create a 'User' Collection in the database which will have the above userSchema
+const userSchema =  new mongoose.Schema({
+    name : String,
+    age : Number,
+    email : String,
+    createdAt : Date,
+    updatedAt : Date,
+    bestfriend : mongoose.SchemaTypes.ObjectId,
+    hobbies : [String],
+    // address : {
+    //     street : String,
+    //     city : String
+    // }
+    //? Declearing schema for a perticular field will give you the unique ObjectId also
+    address : addressSchema 
+})
+
+// The below lines create a 'User' Collection in the database which will have the above userSchema
 module.exports =  mongoose.model("User" , userSchema)
