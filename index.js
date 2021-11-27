@@ -48,16 +48,22 @@ mongoose.connect("mongodb://localhost/testdb")
 
 //! Method 2 of creating user and updating 'current user'
 async function run(){
-    const user = await User.create({
-        name : "Shuvrak", 
-        age : 45,
-        hobbies : ["Gamming", "Swimming", "Converseation"],
-        address : {
-            street : "Gorai Road",
-            city : "Asansol"
-        }
-    })
-    
-    console.log(user);
+    try{
+        const user = await User.create({
+            name : "Shuvrak", 
+            age : "duvhf",
+            hobbies : ["Gamming", "Swimming", "Converseation"],
+            address : {
+                street : "Gorai Road",
+                city : "Asansol"
+            }
+        })
+        console.log(user);
+    }
+    catch(error){
+        console.log("Here is an error : ", error.message);
+        //?  You can use this way to access the errors :- error, error.message, error._message, errors.errrs.age, error.errors.age.reason
+    }
+
 }
 run()

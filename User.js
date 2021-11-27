@@ -1,3 +1,8 @@
+//! Inside schema typr there are 2 important thing
+//? 1 . Schema Type
+//? 2 . Schema Validation
+
+
 const mongoose = require('mongoose');
 
 const addressSchema = new mongoose.Schema({
@@ -17,7 +22,7 @@ const userSchema =  new mongoose.Schema({
     //     street : String,
     //     city : String
     // }
-    //? Declearing schema for a perticular field will give you the unique ObjectId also
+    //? Declearing schema for a perticular field will give you the unique 'ObjectId' also
     address : addressSchema 
 })
 
