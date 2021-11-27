@@ -1,0 +1,20 @@
+{
+  "name": "worldofdb",
+  "version": "1.0.0",
+  "description": "This is my first working with mongoose",
+  "main": "index.js",
+  "scripts": {
+    "devstart": "nodemon index.js"
+  },
+  "keywords": [
+    "mongoose"
+  ],
+  "author": "Abir Pal",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^6.0.13"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
