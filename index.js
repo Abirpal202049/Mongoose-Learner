@@ -50,14 +50,16 @@ mongoose.connect("mongodb://localhost/testdb")
 async function run(){
     try{
         const user = await User.create({
-            name : "Shuvrak", 
-            age : "duvhf",
+            name : "Aryan", 
+            age : 40,
+            email : "abir@gmail.com",
             hobbies : ["Gamming", "Swimming", "Converseation"],
             address : {
                 street : "Gorai Road",
                 city : "Asansol"
             }
         })
+        
         console.log(user);
     }
     catch(error){
